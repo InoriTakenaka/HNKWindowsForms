@@ -8,7 +8,7 @@ namespace HNKControls {
         public PageTab() {
             InitializeComponent();
         }
-        public void AddPages(Form Dialog) {
+        public void AddPages(BorderlessDlg Dialog) {
             BackgroundImage = null;
             string DialogTitile = Dialog.Tag.ToString();
             if (DropDownDialogMenu.Items.Find(DialogTitile, false).Length != 0) {
