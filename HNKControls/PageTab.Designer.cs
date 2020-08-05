@@ -37,10 +37,11 @@
             // DlgContainer
             // 
             this.DlgContainer.Controls.Add(this.InnerForm);
-            this.DlgContainer.Location = new System.Drawing.Point(4, 0);
+            this.DlgContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DlgContainer.Location = new System.Drawing.Point(0, 0);
             this.DlgContainer.Name = "DlgContainer";
             this.DlgContainer.SelectedIndex = 0;
-            this.DlgContainer.Size = new System.Drawing.Size(639, 439);
+            this.DlgContainer.Size = new System.Drawing.Size(643, 442);
             this.DlgContainer.TabIndex = 0;
             // 
             // InnerForm
@@ -48,7 +49,7 @@
             this.InnerForm.Location = new System.Drawing.Point(4, 22);
             this.InnerForm.Name = "InnerForm";
             this.InnerForm.Padding = new System.Windows.Forms.Padding(3);
-            this.InnerForm.Size = new System.Drawing.Size(631, 413);
+            this.InnerForm.Size = new System.Drawing.Size(635, 416);
             this.InnerForm.TabIndex = 1;
             this.InnerForm.Text = "欢迎页";
             this.InnerForm.UseVisualStyleBackColor = true;
@@ -84,7 +85,7 @@
             // DropDownDialogMenu
             // 
             this.DropDownDialogMenu.Name = "DropDownDialogMenu";
-            this.DropDownDialogMenu.Size = new System.Drawing.Size(181, 26);
+            this.DropDownDialogMenu.Size = new System.Drawing.Size(61, 4);
             // 
             // PageTab
             // 

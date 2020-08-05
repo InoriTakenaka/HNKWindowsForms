@@ -25,18 +25,21 @@
         private void InitializeComponent() {
             this.FunctionArea = new HNKControls.PageTab();
             this.TestAddDlg = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // FunctionArea
             // 
-            this.FunctionArea.Location = new System.Drawing.Point(154, 12);
+            this.FunctionArea.Dock = System.Windows.Forms.DockStyle.Right;
+            this.FunctionArea.Location = new System.Drawing.Point(206, 0);
             this.FunctionArea.Name = "FunctionArea";
-            this.FunctionArea.Size = new System.Drawing.Size(643, 442);
+            this.FunctionArea.Size = new System.Drawing.Size(851, 682);
             this.FunctionArea.TabIndex = 0;
             // 
             // TestAddDlg
             // 
-            this.TestAddDlg.Location = new System.Drawing.Point(30, 45);
+            this.TestAddDlg.Location = new System.Drawing.Point(31, 37);
             this.TestAddDlg.Name = "TestAddDlg";
             this.TestAddDlg.Size = new System.Drawing.Size(75, 23);
             this.TestAddDlg.TabIndex = 1;
@@ -44,15 +47,25 @@
             this.TestAddDlg.UseVisualStyleBackColor = true;
             this.TestAddDlg.Click += new System.EventHandler(this.TestAddDlg_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.TestAddDlg);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 682);
+            this.panel1.TabIndex = 2;
+            // 
             // Frm_ControlTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.TestAddDlg);
+            this.ClientSize = new System.Drawing.Size(1057, 682);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.FunctionArea);
             this.Name = "Frm_ControlTest";
             this.Text = "Form1";
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -61,6 +74,7 @@
 
         private HNKControls.PageTab FunctionArea;
         private System.Windows.Forms.Button TestAddDlg;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 

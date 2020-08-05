@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using HNKWindowsForms.Forms;
 namespace HNKWindowsForms {
     static class Program {
         /// <summary>
@@ -13,7 +13,7 @@ namespace HNKWindowsForms {
         static void Main() {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Frm_ControlTest());
+            Application.Run(new FrmNavigation());
         }
     }
 }

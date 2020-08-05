@@ -48,6 +48,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Auxiliary\WinApi.cs" />
+    <Compile Include="Forms\FrmUserLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmUserLogin.Designer.cs">
+      <DependentUpon>FrmUserLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmNavigation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmNavigation.Designer.cs">
+      <DependentUpon>FrmNavigation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_ControlTest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +74,12 @@
     <Compile Include="TestDialog.Designer.cs">
       <DependentUpon>TestDialog.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\FrmNavigation.resx">
+      <DependentUpon>FrmNavigation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmUserLogin.resx">
+      <DependentUpon>FrmUserLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_ControlTest.resx">
       <DependentUpon>Frm_ControlTest.cs</DependentUpon>
     </EmbeddedResource>
@@ -73,6 +91,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="TestDialog.resx">
       <DependentUpon>TestDialog.cs</DependentUpon>
@@ -96,6 +115,272 @@
       <Name>HNKControls</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Add_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddItem_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlignVerticalLeft_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AssignTo_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AssignToMe_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Build_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendar_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChartYAxisSettings_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comlogo.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comlogo1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\compute1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ConvertToParagraphs_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Currency_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Customer_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Customer_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Database_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteList_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DockPane_Close.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DockPane_Closek.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocumentMap_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Download_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EditContact_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Employee_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ExportToXLS_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\formula.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Grid_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icos_20147101022231.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IDE_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Index_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Info_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loginlogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogoSystem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NavBtnBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NavBtnBG1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Notes_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Open_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\people1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\people2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\people3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\peopledefault2.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\photodefault.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pivot_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PPC-750cx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Print_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PrintDialog_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PrintDialog_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PublicFix_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Registration.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remove_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Scheduler.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\screenlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SendToBack_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sigma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sigma1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Suggestion_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\syspng.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tabPane_Close.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tabPane_Close1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tabPane_Closek.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tabPane_Closek1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tabPane_OptionOverflow.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tabPane_OptionOverflow1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tabPane_OptionOverflowk.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tabPane_OptionOverflowk1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Task_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Team_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TimeLineView_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TipScreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UserGroup_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\welcome.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\welcometext.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\windows.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\windows.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wizard_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Work area.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

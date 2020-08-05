@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HNKControls", "HNKControls\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HNKCore", "HNKCore\HNKCore.csproj", "{3448695E-EAA4-42D4-9A86-4396C6964B89}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HNKInfrastructure", "HNKInfrastructure\HNKInfrastructure.csproj", "{6E09E455-27EA-47EE-B4B1-32285ECF7AE4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{3448695E-EAA4-42D4-9A86-4396C6964B89}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3448695E-EAA4-42D4-9A86-4396C6964B89}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3448695E-EAA4-42D4-9A86-4396C6964B89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E09E455-27EA-47EE-B4B1-32285ECF7AE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E09E455-27EA-47EE-B4B1-32285ECF7AE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E09E455-27EA-47EE-B4B1-32285ECF7AE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E09E455-27EA-47EE-B4B1-32285ECF7AE4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
