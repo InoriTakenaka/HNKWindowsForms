@@ -8,7 +8,11 @@ namespace HNKControls {
     public partial class NavBar : Control {
         public List<IconGroup> Groups { get; set; } = new List<IconGroup>();
         public event EventHandler OnItemClick;
-        public NavBar(string[] CaptionTexts) {
+        /// <summary>
+        /// a Dictionary contains Menu's caption text and its order 
+        /// </summary>
+        /// <param name="CaptionTexts"></param>
+        public NavBar(Dictionary<string,int> CaptionTexts) {
             this.CaptionTexts_ = CaptionTexts;
             this.Dock = DockStyle.Fill;
             InitializeComponent();
@@ -17,10 +21,12 @@ namespace HNKControls {
             if (this.Parent != null) {
                 this.Parent.SizeChanged += ParentSizeChanged;
             }
-            for (int i = 0; i < this.CaptionTexts_.Length; i++) {
-                IconGroup group = new IconGroup(CaptionTexts_[i], this.Size.Width);
+            int i = 0;
+           foreach(var menu in CaptionTexts_){ 
+                IconGroup group = new IconGroup(menu.Key, this.Size.Width);
                 group.OnIconButtonClick += OnItemClick;
-                group.GroupIndex = i;
+                group.GroupIndex = ++i;
+                group.OrderId = menu.Value;
                 group.OnCaptionButtionClick += GroupCaptionButtonClick;
                 this.Groups.Add(group);
             }
@@ -57,7 +63,7 @@ namespace HNKControls {
             base.OnPaint(pe);
         }
 
-        private string[] CaptionTexts_;
+        private Dictionary<string, int> CaptionTexts_;
         private int CurrentIndex_ = 0;
         private const int CaptionButtonHeight_ = 29;
     }//class NavBar

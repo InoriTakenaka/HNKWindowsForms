@@ -38,9 +38,30 @@ namespace HNKControls {
             Controls.Add(IconPanel_);
         }
 
+        public void AddIcons(params IconButton[] buttons) {
+            for (int i = 0; i < buttons.Length; i++)
+                this.IconButtons.Add(buttons[i]);
+            this.GenerateIcons();
+        }
+
+        private void GenerateIcons() {
+            int margin = 20;
+            int iconHeight = 70;
+            IconPanel_.Location = new Point(1, 29);
+            int panelHeight = this.IconButtons.Count == 0 ?
+                0 : IconButtons.Count * iconHeight + margin;
+            IconPanel_.Size = new Size(Width - 2, panelHeight);
+            for(int i = 0; i < this.IconButtons.Count; i++) {
+                IconButtons[i].Location = new Point(Width / 2 - IconButtons[i].Width / 2, margin + i * iconHeight);
+                IconButtons[i].EventIconClick += OnIconButtonClick;
+                IconPanel_.Controls.Add(this.IconButtons[i]);
+            }
+        }
+
         public event EventHandler OnCaptionButtionClick;
         public event EventHandler OnIconButtonClick;
         public List<IconButton> IconButtons { get; set; }
+        public int OrderId { get; set; }
         public int GroupIndex{get;set;}
         private Button CaptionButton_ = new Button();
         private const int kCapationButtonHeight_ = 30;

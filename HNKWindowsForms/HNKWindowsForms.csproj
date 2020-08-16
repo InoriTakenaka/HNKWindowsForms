@@ -47,7 +47,45 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Auxiliary\AppManager.cs" />
+    <Compile Include="Auxiliary\ExtensionMethods.cs" />
     <Compile Include="Auxiliary\WinApi.cs" />
+    <Compile Include="Forms\Application\FrmDeaprtmentInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Application\FrmDeaprtmentInfo.Designer.cs">
+      <DependentUpon>FrmDeaprtmentInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Application\FrmDepartmentManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Application\FrmDepartmentManager.Designer.cs">
+      <DependentUpon>FrmDepartmentManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmMenuManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmMenuManager.Designer.cs">
+      <DependentUpon>FrmMenuManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmUserManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmUserManage.Designer.cs">
+      <DependentUpon>FrmUserManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmRoleManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmRoleManage.Designer.cs">
+      <DependentUpon>FrmRoleManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmRoleSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmRoleSetup.Designer.cs">
+      <DependentUpon>FrmRoleSetup.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmUserLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,28 +98,40 @@
     <Compile Include="Forms\FrmNavigation.Designer.cs">
       <DependentUpon>FrmNavigation.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_ControlTest.cs">
+    <Compile Include="Forms\FrmUserRoleSetup.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_ControlTest.Designer.cs">
-      <DependentUpon>Frm_ControlTest.cs</DependentUpon>
+    <Compile Include="Forms\FrmUserRoleSetup.Designer.cs">
+      <DependentUpon>FrmUserRoleSetup.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestDialog.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TestDialog.Designer.cs">
-      <DependentUpon>TestDialog.cs</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="Forms\Application\FrmDeaprtmentInfo.resx">
+      <DependentUpon>FrmDeaprtmentInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Application\FrmDepartmentManager.resx">
+      <DependentUpon>FrmDepartmentManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmMenuManager.resx">
+      <DependentUpon>FrmMenuManager.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmNavigation.resx">
       <DependentUpon>FrmNavigation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmUserManage.resx">
+      <DependentUpon>FrmUserManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmRoleManage.resx">
+      <DependentUpon>FrmRoleManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmRoleSetup.resx">
+      <DependentUpon>FrmRoleSetup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmUserLogin.resx">
       <DependentUpon>FrmUserLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_ControlTest.resx">
-      <DependentUpon>Frm_ControlTest.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FrmUserRoleSetup.resx">
+      <DependentUpon>FrmUserRoleSetup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -93,9 +143,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="TestDialog.resx">
-      <DependentUpon>TestDialog.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -113,6 +160,14 @@
     <ProjectReference Include="..\HNKControls\HNKControls.csproj">
       <Project>{69fb6836-6981-4a07-99c7-a9d9cd90fda9}</Project>
       <Name>HNKControls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HNKCore\HNKCore.csproj">
+      <Project>{3448695e-eaa4-42d4-9a86-4396c6964b89}</Project>
+      <Name>HNKCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HNKInfrastructure\HNKInfrastructure.csproj">
+      <Project>{6e09e455-27ea-47ee-b4b1-32285ecf7ae4}</Project>
+      <Name>HNKInfrastructure</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

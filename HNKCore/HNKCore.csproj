@@ -44,7 +44,13 @@
     <Compile Include="Entity.cs" />
     <Compile Include="IDataSource.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proto\Department.cs" />
+    <Compile Include="Proto\Menus.cs" />
     <Compile Include="Proto\ResponseModel.cs" />
+    <Compile Include="Proto\RoleMenuMaps.cs" />
+    <Compile Include="Proto\Roles.cs" />
+    <Compile Include="Proto\UserRoleMaps.cs" />
+    <Compile Include="Proto\Users.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

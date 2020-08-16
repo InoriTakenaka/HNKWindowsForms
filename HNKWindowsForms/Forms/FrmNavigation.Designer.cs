@@ -25,6 +25,9 @@
         private void InitializeComponent() {
             this.MenuStrip = new System.Windows.Forms.MenuStrip();
             this.SystemMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.SystemMenuLoginItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuMgrButton = new System.Windows.Forms.ToolStripMenuItem();
+            this.RoleManageButton = new System.Windows.Forms.ToolStripMenuItem();
             this.HelpMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.NavigatoButton = new System.Windows.Forms.ToolStripButton();
@@ -32,7 +35,8 @@
             this.CalculatorButton = new System.Windows.Forms.ToolStripButton();
             this.LogoutButton = new System.Windows.Forms.ToolStripButton();
             this.NaviContainer = new System.Windows.Forms.Panel();
-            this.pageTab1 = new HNKControls.PageTab();
+            this.FunctionArea = new HNKControls.PageTab();
+            this.UserManageButton = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuStrip.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -51,9 +55,35 @@
             // 
             // SystemMenu
             // 
+            this.SystemMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.SystemMenuLoginItem,
+            this.MenuMgrButton,
+            this.RoleManageButton,
+            this.UserManageButton});
             this.SystemMenu.Name = "SystemMenu";
             this.SystemMenu.Size = new System.Drawing.Size(59, 20);
             this.SystemMenu.Text = "系统(&S)";
+            // 
+            // SystemMenuLoginItem
+            // 
+            this.SystemMenuLoginItem.Name = "SystemMenuLoginItem";
+            this.SystemMenuLoginItem.Size = new System.Drawing.Size(180, 22);
+            this.SystemMenuLoginItem.Text = "登陆(&L)";
+            this.SystemMenuLoginItem.Click += new System.EventHandler(this.SystemMenuLoginItem_Click);
+            // 
+            // MenuMgrButton
+            // 
+            this.MenuMgrButton.Name = "MenuMgrButton";
+            this.MenuMgrButton.Size = new System.Drawing.Size(180, 22);
+            this.MenuMgrButton.Text = "菜单管理(&M)";
+            this.MenuMgrButton.Click += new System.EventHandler(this.MenuMgrButton_Click);
+            // 
+            // RoleManageButton
+            // 
+            this.RoleManageButton.Name = "RoleManageButton";
+            this.RoleManageButton.Size = new System.Drawing.Size(180, 22);
+            this.RoleManageButton.Text = "角色管理(&R)";
+            this.RoleManageButton.Click += new System.EventHandler(this.RoleManageButton_Click);
             // 
             // HelpMenu
             // 
@@ -124,13 +154,20 @@
             this.NaviContainer.Size = new System.Drawing.Size(200, 716);
             this.NaviContainer.TabIndex = 2;
             // 
-            // pageTab1
+            // FunctionArea
             // 
-            this.pageTab1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pageTab1.Location = new System.Drawing.Point(200, 74);
-            this.pageTab1.Name = "pageTab1";
-            this.pageTab1.Size = new System.Drawing.Size(1141, 716);
-            this.pageTab1.TabIndex = 3;
+            this.FunctionArea.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FunctionArea.Location = new System.Drawing.Point(200, 74);
+            this.FunctionArea.Name = "FunctionArea";
+            this.FunctionArea.Size = new System.Drawing.Size(1141, 716);
+            this.FunctionArea.TabIndex = 3;
+            // 
+            // UserManageButton
+            // 
+            this.UserManageButton.Name = "UserManageButton";
+            this.UserManageButton.Size = new System.Drawing.Size(180, 22);
+            this.UserManageButton.Text = "用户管理(&U)";
+            this.UserManageButton.Click += new System.EventHandler(this.UserManageButton_Click);
             // 
             // FrmNavigation
             // 
@@ -138,7 +175,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1341, 790);
             this.ControlBox = false;
-            this.Controls.Add(this.pageTab1);
+            this.Controls.Add(this.FunctionArea);
             this.Controls.Add(this.NaviContainer);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.MenuStrip);
@@ -167,6 +204,10 @@
         private System.Windows.Forms.ToolStripButton CalculatorButton;
         private System.Windows.Forms.ToolStripButton LogoutButton;
         private System.Windows.Forms.Panel NaviContainer;
-        private HNKControls.PageTab pageTab1;
+        private HNKControls.PageTab FunctionArea;
+        private System.Windows.Forms.ToolStripMenuItem SystemMenuLoginItem;
+        private System.Windows.Forms.ToolStripMenuItem MenuMgrButton;
+        private System.Windows.Forms.ToolStripMenuItem RoleManageButton;
+        private System.Windows.Forms.ToolStripMenuItem UserManageButton;
     }
 }

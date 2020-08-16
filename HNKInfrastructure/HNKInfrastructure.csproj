@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Api\DepartmentServiceClient.cs" />
+    <Compile Include="Api\MenuServiceClient.cs" />
     <Compile Include="Api\RbacServiceClient.cs" />
     <Compile Include="Api\RestClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
